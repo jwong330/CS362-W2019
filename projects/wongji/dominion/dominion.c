@@ -51,16 +51,16 @@ int cardAdventurer(int currentPlayer, int temphand[], int temphandCount, struct 
 int cardCouncilRoom(int currentPlayer, struct gameState *state, int handPos)
 {
 	//+4 Cards
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i <= 4; i++)
 	{
 		drawCard(currentPlayer, state);
 	}
-
+	shuffle(currentPlayer, state);
 	//+1 Buy
 	state->numBuys++;
 
 	//Each other player draws a card
-	for (int i = 0; i < state->numPlayers; i++)
+	for (int i = 0; i <= state->numPlayers; i++)
 	{
 		if (i != currentPlayer)
 		{
