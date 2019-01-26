@@ -137,17 +137,17 @@ int cardMine(int choice1, int choice2, int currentPlayer, struct gameState *stat
 		return -1;
 	}
 
-	if (choice2 > treasure_map || choice2 < curse)
+	if (choice1 > treasure_map || choice1 < curse)
 	{
 		return -1;
 	}
 
-	if ((getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2))
+	if ((getCost(state->hand[currentPlayer][choice2]) + 3) > getCost(choice1))
 	{
 		return -1;
 	}
 
-	gainCard(choice2, state, 2, currentPlayer);
+	gainCard(choice1, state, 2, currentPlayer);
 
 	//discard card from hand
 	discardCard(handPos, currentPlayer, state, 0);
