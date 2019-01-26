@@ -84,7 +84,7 @@ int cardFeast(int choice1, int currentPlayer, int temphand[], struct gameState *
 	}
 
 	//Update Coins for Buy
-	updateCoins(currentPlayer, state, 5);
+	//updateCoins(currentPlayer, state, 5);
 
 	int x = 1;//Condition to loop on
 	while (x == 1) {//Buy one card
@@ -120,10 +120,10 @@ int cardFeast(int choice1, int currentPlayer, int temphand[], struct gameState *
 	}
 
 	//Reset Hand
-	for (int i = 0; i <= state->handCount[currentPlayer]; i++) {
-		state->hand[currentPlayer][i] = temphand[i];
-		temphand[i] = -1;
-	}
+	//for (int i = 0; i <= state->handCount[currentPlayer]; i++) {
+	//	state->hand[currentPlayer][i] = temphand[i];
+	//	temphand[i] = -1;
+	//}
 
 	return 0;
 }
